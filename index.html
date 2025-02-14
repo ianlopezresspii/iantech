@@ -51,6 +51,13 @@
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
+            opacity: 0; /* Comienza invisible */
+            transform: translateY(30px); /* Se mueve hacia abajo */
+            transition: opacity 1s ease-out, transform 1s ease-out; /* Transición de desvanecimiento y movimiento */
+        }
+        section.visible {
+            opacity: 1;
+            transform: translateY(0); /* Vuelve a la posición original */
         }
         .servicios { background: #f4f4f4; }
         .contacto { background: #ddd; }
@@ -89,13 +96,6 @@
             opacity: 1;
             transform: translateY(0);
         }
-        .fade-in {
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-        .fade-in.visible {
-            opacity: 1;
-        }
     </style>
 </head>
 <body>
@@ -108,11 +108,11 @@
         <a href="#testimonios">Testimonios</a>
         <a href="#contacto">Contacto</a>
     </nav>
-    <section id="nosotros" class="nosotros fade-in">
+    <section id="nosotros" class="nosotros">
         <h2>Sobre Nosotros</h2>
         <p>En IanTech te mostramos cómo armamos, reparamos y optimizamos tus equipos. Nos apasiona la tecnología y queremos que confíes en nuestro trabajo. Transparencia y calidad en cada reparación.</p>
     </section>
-    <section id="servicios" class="servicios fade-in">
+    <section id="servicios" class="servicios">
         <h2>Nuestros Servicios</h2>
         <ul>
             <li>Reparación de computadoras</li>
@@ -121,12 +121,12 @@
             <li>Optimización y mantenimiento preventivo</li>
         </ul>
     </section>
-    <section id="testimonios" class="testimonios fade-in">
+    <section id="testimonios" class="testimonios">
         <h2>Lo que dicen nuestros clientes</h2>
         <p>"Excelente servicio, repararon mi PC en tiempo récord." - Juan Pérez</p>
         <p>"Muy profesionales, explican todo el proceso y me dieron recomendaciones para el mantenimiento y optimización." - María López</p>
     </section>
-    <section id="contacto" class="contacto fade-in">
+    <section id="contacto" class="contacto">
         <h2>Contacto</h2>
         <p>¡Contáctanos para más información!</p>
         <p><strong>WhatsApp:</strong> +54 221 676 3741</p>
@@ -142,22 +142,17 @@
     </section>
 
     <script>
+        // Detecta cuando las secciones se vuelven visibles
         window.addEventListener('scroll', function() {
-            const elements = document.querySelectorAll('.fade-in');
-            elements.forEach(element => {
-                const rect = element.getBoundingClientRect();
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
                 if (rect.top < window.innerHeight && rect.bottom >= 0) {
-                    element.classList.add('visible');
+                    section.classList.add('visible');
                 }
-            });
-        });
-
-        window.addEventListener('DOMContentLoaded', function() {
-            const inputs = document.querySelectorAll('input, textarea');
-            inputs.forEach(input => {
-                input.classList.add('visible');
             });
         });
     </script>
 </body>
 </html>
+

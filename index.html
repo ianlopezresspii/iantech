@@ -5,38 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IanTech - Reparación y Ensamblaje</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background: #e0e0e0; }
-        header { background: #0056b3; color: white; padding: 20px; font-size: 24px; position: fixed; top: 0; width: 100%; z-index: 1000; }
-        nav { background: #003c80; padding: 10px; position: fixed; top: 70px; width: 100%; z-index: 999; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-size: 18px; transition: transform 0.3s, color 0.3s; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; text-align: center; background: #f4f4f4; }
+        header { background: linear-gradient(90deg, #004080, #007bff); color: white; padding: 20px; font-size: 26px; font-weight: bold; position: fixed; top: 0; width: 100%; z-index: 1000; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); }
+        nav { background: #002d5e; padding: 10px; position: fixed; top: 70px; width: 100%; z-index: 999; box-shadow: 0px 2px 5px rgba(0,0,0,0.1); }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-size: 18px; padding: 10px; transition: transform 0.3s, color 0.3s; }
         nav a:hover { transform: scale(1.1); color: #ffcc00; }
-        
+
         .content { padding-top: 120px; }
-        section { padding: 40px; max-width: 800px; margin: auto; background: white; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); margin-bottom: 20px; }
+        section { padding: 50px; max-width: 900px; margin: auto; background: white; border-radius: 12px; box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); margin-bottom: 30px; transition: transform 0.3s ease-in-out; }
+        section:hover { transform: translateY(-5px); }
         .servicios { background: #d1ecf1; }
         .contacto { background: #f8d7da; }
         .nosotros { background: #cce5ff; }
         .testimonios { background: #fff3cd; }
 
-        button { padding: 10px 20px; background: #007bff; color: white; border: none; cursor: pointer; border-radius: 5px; font-size: 16px; transition: transform 0.3s, background-color 0.3s; }
+        button { padding: 12px 25px; background: #007bff; color: white; border: none; cursor: pointer; border-radius: 8px; font-size: 18px; transition: transform 0.3s, background-color 0.3s; }
         button:hover { transform: scale(1.1); background-color: #0056b3; }
 
         form { display: flex; flex-direction: column; align-items: center; }
-        input, textarea { width: 80%; max-width: 500px; padding: 15px; margin: 10px 0; border: 2px solid #ccc; border-radius: 8px; font-size: 16px; }
-        input[type="submit"] { background: #007bff; color: white; cursor: pointer; transition: transform 0.3s, background-color 0.3s; }
+        input, textarea { width: 85%; max-width: 500px; padding: 15px; margin: 10px 0; border: 2px solid #ccc; border-radius: 10px; font-size: 16px; box-shadow: inset 0px 3px 6px rgba(0,0,0,0.1); }
+        input[type="submit"] { background: #007bff; color: white; cursor: pointer; transition: transform 0.3s, background-color 0.3s; border: none; font-size: 18px; }
         input[type="submit"]:hover { transform: scale(1.05); background-color: #0056b3; }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            header { font-size: 20px; padding: 15px; }
+            header { font-size: 22px; padding: 15px; }
             nav { top: 60px; padding: 5px; }
             nav a { font-size: 16px; display: block; padding: 10px; }
+            section { padding: 30px; }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>IanTech - Reparación y Ensamblaje</h1>
+        IanTech - Reparación y Ensamblaje
     </header>
     <nav>
         <a href="#nosotros">Nosotros</a>

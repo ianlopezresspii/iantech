@@ -3,58 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IanTech - Reparación y Ensamblaje</title>
+    <title>IanTech - Soluciones en Computación</title>
     <style>
-        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; text-align: center; background: #f4f4f4; }
-        header { background: linear-gradient(90deg, #004080, #007bff); color: white; padding: 20px; font-size: 26px; font-weight: bold; position: fixed; top: 0; width: 100%; z-index: 1000; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); }
-        nav { background: #002d5e; padding: 10px; position: fixed; top: 70px; width: 100%; z-index: 999; box-shadow: 0px 2px 5px rgba(0,0,0,0.1); }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-size: 18px; padding: 10px; transition: transform 0.3s, color 0.3s; }
-        nav a:hover { transform: scale(1.1); color: #ffcc00; }
-
-        .content { padding-top: 120px; }
-        section { padding: 50px; max-width: 900px; margin: auto; background: white; border-radius: 12px; box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); margin-bottom: 30px; transition: transform 0.3s ease-in-out; }
-        section:hover { transform: translateY(-5px); }
-        .servicios { background: #d1ecf1; }
-        .contacto { background: #f8d7da; }
-        .nosotros { background: #cce5ff; }
-        .testimonios { background: #fff3cd; }
-
-        button { padding: 12px 25px; background: #007bff; color: white; border: none; cursor: pointer; border-radius: 8px; font-size: 18px; transition: transform 0.3s, background-color 0.3s; }
-        button:hover { transform: scale(1.1); background-color: #0056b3; }
-
-        form { display: flex; flex-direction: column; align-items: center; }
-        input, textarea { width: 85%; max-width: 500px; padding: 15px; margin: 10px 0; border: 2px solid #ccc; border-radius: 10px; font-size: 16px; box-shadow: inset 0px 3px 6px rgba(0,0,0,0.1); }
-        input[type="submit"] { background: #007bff; color: white; cursor: pointer; transition: transform 0.3s, background-color 0.3s; border: none; font-size: 18px; }
-        input[type="submit"]:hover { transform: scale(1.05); background-color: #0056b3; }
-
-        /* Responsive Design */
+        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+        header { background: linear-gradient(90deg, #003366, #007bff); color: white; padding: 20px; font-size: 26px; font-weight: bold; text-align: center; position: fixed; top: 0; width: 100%; z-index: 1000; }
+        .sidebar { position: fixed; left: 0; top: 70px; width: 250px; background: #002d5e; height: 100%; padding-top: 20px; }
+        .sidebar a { display: block; color: white; padding: 15px; text-decoration: none; font-size: 18px; transition: background 0.3s; }
+        .sidebar a:hover { background: #004080; }
+        .content { margin-left: 270px; padding-top: 100px; }
+        section { padding: 50px; max-width: 900px; margin: auto; background: white; border-radius: 12px; box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); margin-bottom: 30px; }
+        .problema { font-size: 22px; font-weight: bold; text-align: center; }
+        .imagen-problema { width: 100%; max-width: 800px; border-radius: 10px; }
+        .horarios { background: #ffd700; text-align: center; padding: 20px; font-size: 20px; font-weight: bold; border-radius: 10px; margin-top: 30px; }
         @media (max-width: 768px) {
-            header { font-size: 22px; padding: 15px; }
-            nav { top: 60px; padding: 5px; }
-            nav a { font-size: 16px; display: block; padding: 10px; }
-            section { padding: 30px; }
+            .sidebar { width: 100%; height: auto; position: relative; }
+            .sidebar a { text-align: center; float: left; width: 25%; padding: 10px; }
+            .content { margin-left: 0; padding-top: 120px; }
         }
     </style>
 </head>
 <body>
     <header>
-        IanTech - Reparación y Ensamblaje
+        IanTech - Soluciones en Computación
     </header>
-    <nav>
+    <div class="sidebar">
         <a href="#nosotros">Nosotros</a>
         <a href="#servicios">Servicios</a>
         <a href="#testimonios">Testimonios</a>
         <a href="#contacto">Contacto</a>
-    </nav>
+    </div>
     <div class="content">
-        <section id="nosotros" class="nosotros">
+        <section id="problema">
+            <p class="problema">¿Tenés problemas con tu computadora?</p>
+            <p class="problema">¿No da video? ¿Se apaga sola?</p>
+            <img src="https://source.unsplash.com/800x400/?broken-computer" class="imagen-problema" alt="Computadora con fallas">
+        </section>
+        <section id="nosotros">
             <h2>Sobre Nosotros</h2>
-            <img src="https://source.unsplash.com/800x400/?computer,technology" alt="Computadora en reparación" style="width:100%; border-radius:10px;">
             <p>Expertos en reparación y ensamblaje de equipos.</p>
         </section>
-        <section id="servicios" class="servicios">
+        <section id="servicios">
             <h2>Nuestros Servicios</h2>
-            <img src="https://source.unsplash.com/800x400/?laptop,smartphone" alt="Servicios de reparación" style="width:100%; border-radius:10px;">
             <ul>
                 <li>Reparación de computadoras</li>
                 <li>Reparación de celulares</li>
@@ -62,30 +51,19 @@
                 <li>Optimización y mantenimiento</li>
             </ul>
         </section>
-        <section id="testimonios" class="testimonios">
+        <section id="testimonios">
             <h2>Lo que dicen nuestros clientes</h2>
-            <img src="https://source.unsplash.com/800x400/?customer,satisfaction" alt="Clientes satisfechos" style="width:100%; border-radius:10px;">
             <p>"Servicio rápido y confiable" - Juan Pérez</p>
         </section>
-        <section id="contacto" class="contacto">
+        <section id="contacto">
             <h2>Contacto</h2>
-            <p>¡Contáctanos para más información!</p>
             <button onclick="window.location.href='https://wa.me/542216763741'">WhatsApp</button>
-            <h3>O déjanos tu mensaje</h3>
-            <form id="contactForm">
-                <input type="text" placeholder="Tu nombre" required>
-                <input type="email" placeholder="Tu correo" required>
-                <textarea placeholder="Tu mensaje" rows="4" required></textarea>
-                <input type="submit" value="Enviar">
-            </form>
-            <p id="graciasMensaje" style="display:none; color:#ff0000; font-size:18px;">Gracias por elegirnos ❤️</p>
         </section>
+        <div class="horarios">
+            <p><strong>⏰ Horarios:</strong></p>
+            <p>Lunes a Viernes 10:00 - 17:00 hs</p>
+            <p>Sábados 10:00 - 13:00 hs</p>
+        </div>
     </div>
-    <script>
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            document.getElementById("graciasMensaje").style.display = "block";
-        });
-    </script>
 </body>
 </html>

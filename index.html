@@ -3,26 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IanTech - Reparaci髇, Ensamblaje y Optimizaci髇</title>
+    <title>IanTech - Reparaci贸n, Ensamblaje y Optimizaci贸n</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background: #f0f0f0; }
-        header { background: #007bff; color: white; padding: 20px; font-size: 24px; position: sticky; top: 0; z-index: 1000; }
-        nav { background: #0056b3; padding: 10px; position: sticky; top: 60px; z-index: 1000; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; font-size: 18px; }
-        section { padding: 40px; max-width: 800px; margin: auto; background: white; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); margin-bottom: 20px; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: url('ruta/a/tu/imagen1.jpg'), url('ruta/a/tu/imagen2.jpg'); /* Reemplaza con tus im谩genes */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        header {
+            background: rgba(0, 123, 255, 0.8);
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            background: rgba(0, 86, 179, 0.8);
+            padding: 10px;
+            position: sticky;
+            top: 60px;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        nav a:hover {
+            transform: scale(1.1);
+            color: #ffcc00;
+        }
+        section {
+            padding: 40px;
+            max-width: 800px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
         .servicios { background: #f4f4f4; }
         .contacto { background: #ddd; }
         .nosotros { background: #e3f2fd; }
         .testimonios { background: #fff3cd; }
-        button { padding: 10px 20px; background: #007bff; color: white; border: none; cursor: pointer; border-radius: 5px; font-size: 16px; }
-        form { display: flex; flex-direction: column; max-width: 400px; margin: auto; }
-        input, textarea { margin: 10px 0; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
-        input[type="submit"] { background: #007bff; color: white; border: none; cursor: pointer; }
+        button {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        button:hover {
+            transform: scale(1.1);
+            background-color: #0056b3;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: auto;
+        }
+        input, textarea {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        input.visible, textarea.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>IanTech - Reparaci髇 de Computadoras y Celulares - Armado y Optimizaci髇 de Computadoras</h1>
+        <h1>IanTech - Reparaci贸n de Computadoras y Celulares - Armado y Optimizaci贸n de Computadoras</h1>
     </header>
     <nav>
         <a href="#nosotros">Nosotros</a>
@@ -30,31 +108,31 @@
         <a href="#testimonios">Testimonios</a>
         <a href="#contacto">Contacto</a>
     </nav>
-    <section id="nosotros" class="nosotros">
+    <section id="nosotros" class="nosotros fade-in">
         <h2>Sobre Nosotros</h2>
-        <p>En IanTech te mostramos c髆o armamos, reparamos y optimizamos tus equipos. Nos apasiona la tecnolog韆 y queremos que conf韊s en nuestro trabajo. Transparencia y calidad en cada reparaci髇.</p>
+        <p>En IanTech te mostramos c贸mo armamos, reparamos y optimizamos tus equipos. Nos apasiona la tecnolog铆a y queremos que conf铆es en nuestro trabajo. Transparencia y calidad en cada reparaci贸n.</p>
     </section>
-    <section id="servicios" class="servicios">
+    <section id="servicios" class="servicios fade-in">
         <h2>Nuestros Servicios</h2>
         <ul>
-            <li>Reparaci髇 de computadoras</li>
-            <li>Reparaci髇 de celulares</li>
+            <li>Reparaci贸n de computadoras</li>
+            <li>Reparaci贸n de celulares</li>
             <li>Ensamblaje de PC</li>
-            <li>Optimizaci髇 y mantenimiento preventivo</li>
+            <li>Optimizaci贸n y mantenimiento preventivo</li>
         </ul>
     </section>
-    <section id="testimonios" class="testimonios">
+    <section id="testimonios" class="testimonios fade-in">
         <h2>Lo que dicen nuestros clientes</h2>
-        <p>"Excelente servicio, repararon mi PC en tiempo r閏ord." - Juan P閞ez</p>
-        <p>"Muy profesionales, explican todo el proceso y me dieron recomendaciones para el mantenimiento y optimizaci髇." - Mar韆 L髉ez</p>
+        <p>"Excelente servicio, repararon mi PC en tiempo r茅cord." - Juan P茅rez</p>
+        <p>"Muy profesionales, explican todo el proceso y me dieron recomendaciones para el mantenimiento y optimizaci贸n." - Mar铆a L贸pez</p>
     </section>
-    <section id="contacto" class="contacto">
+    <section id="contacto" class="contacto fade-in">
         <h2>Contacto</h2>
-        <p>ont醕tanos para m醩 informaci髇!</p>
+        <p>隆Cont谩ctanos para m谩s informaci贸n!</p>
         <p><strong>WhatsApp:</strong> +54 221 676 3741</p>
         <p><strong>Email:</strong> <a href="mailto:alelidaniele@gmail.com">alelidaniele@gmail.com</a></p>
         <button onclick="window.location.href='https://wa.me/542216763741'">WhatsApp</button>
-        <h3>O d閖anos tu mensaje</h3>
+        <h3>O d茅janos tu mensaje</h3>
         <form action="https://formspree.io/f/xvgzwgkd" method="POST">
             <input type="text" placeholder="Tu nombre" required>
             <input type="email" placeholder="Tu correo" required>
@@ -62,5 +140,24 @@
             <input type="submit" value="Enviar">
         </form>
     </section>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    element.classList.add('visible');
+                }
+            });
+        });
+
+        window.addEventListener('DOMContentLoaded', function() {
+            const inputs = document.querySelectorAll('input, textarea');
+            inputs.forEach(input => {
+                input.classList.add('visible');
+            });
+        });
+    </script>
 </body>
 </html>

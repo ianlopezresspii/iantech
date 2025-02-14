@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IanTech - Reparación, Ensamblaje y Optimización</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background: #f0f0f0; }
+        header { background: #007bff; color: white; padding: 20px; font-size: 24px; position: sticky; top: 0; z-index: 1000; }
+        nav { background: #0056b3; padding: 10px; position: sticky; top: 60px; z-index: 1000; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-size: 18px; }
+        section { padding: 40px; max-width: 800px; margin: auto; background: white; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); margin-bottom: 20px; }
+        .servicios { background: #f4f4f4; }
+        .contacto { background: #ddd; }
+        .nosotros { background: #e3f2fd; }
+        .testimonios { background: #fff3cd; }
+        button { padding: 10px 20px; background: #007bff; color: white; border: none; cursor: pointer; border-radius: 5px; font-size: 16px; }
+        form { display: flex; flex-direction: column; max-width: 400px; margin: auto; }
+        input, textarea { margin: 10px 0; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+        input[type="submit"] { background: #007bff; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>IanTech - Reparación de Computadoras y Celulares - Armado y Optimización de Computadoras</h1>
+    </header>
+    <nav>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <section id="nosotros" class="nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>En IanTech te mostramos cómo armamos, reparamos y optimizamos tus equipos. Nos apasiona la tecnología y queremos que confíes en nuestro trabajo. Transparencia y calidad en cada reparación.</p>
+    </section>
+    <section id="servicios" class="servicios">
+        <h2>Nuestros Servicios</h2>
+        <ul>
+            <li>Reparación de computadoras</li>
+            <li>Reparación de celulares</li>
+            <li>Ensamblaje de PC</li>
+            <li>Optimización y mantenimiento preventivo</li>
+        </ul>
+    </section>
+    <section id="testimonios" class="testimonios">
+        <h2>Lo que dicen nuestros clientes</h2>
+        <p>"Excelente servicio, repararon mi PC en tiempo récord." - Juan Pérez</p>
+        <p>"Muy profesionales, explican todo el proceso y me dieron recomendaciones para el mantenimiento y optimización." - María López</p>
+    </section>
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <p>¡Contáctanos para más información!</p>
+        <p><strong>WhatsApp:</strong> +54 221 676 3741</p>
+        <p><strong>Email:</strong> <a href="mailto:alelidaniele@gmail.com">alelidaniele@gmail.com</a></p>
+        <button onclick="window.location.href='https://wa.me/542216763741'">WhatsApp</button>
+        <h3>O déjanos tu mensaje</h3>
+        <form action="https://formspree.io/f/xvgzwgkd" method="POST">
+            <input type="text" placeholder="Tu nombre" required>
+            <input type="email" placeholder="Tu correo" required>
+            <textarea placeholder="Tu mensaje" rows="4" required></textarea>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+</body>
+</html>

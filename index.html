@@ -3,122 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IanTech - Reparación, Ensamblaje y Optimización</title>
+    <title>IanTech - Reparación y Ensamblaje</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background: url('ruta/a/tu/imagen1.jpg'), url('ruta/a/tu/imagen2.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        header {
-            background: rgba(0, 123, 255, 0.9); /* Azul brillante */
-            color: white;
-            padding: 20px;
-            font-size: 26px;
-            font-weight: bold;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        }
-        nav {
-            background: rgba(0, 86, 179, 0.9); /* Azul más oscuro */
-            padding: 12px;
-            position: sticky;
-            top: 80px;
-            z-index: 1000;
-        }
-        nav a {
-            color: white;
-            margin: 0 20px;
-            text-decoration: none;
-            font-size: 18px;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-        nav a:hover {
-            transform: scale(1.1);
-            color: #ffcc00; /* Amarillo */
-        }
-        section {
-            padding: 50px;
-            max-width: 800px;
-            margin: auto;
-            background: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            opacity: 0; /* Inicia invisible */
-            transform: translateY(30px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-        }
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        /* Colores más vibrantes para las secciones */
-        .servicios {
-            background: linear-gradient(to right, #ff7e5f, #feb47b); /* Naranja/rosado vibrante */
-        }
-        .contacto {
-            background: linear-gradient(to right, #00b4d8, #0077b6); /* Azul vibrante */
-        }
-        .nosotros {
-            background: linear-gradient(to right, #fcbf49, #f77f00); /* Amarillo y naranja */
-        }
-        .testimonios {
-            background: linear-gradient(to right, #ff9a8b, #ff6a88); /* Rojo rosado brillante */
-        }
-        button {
-            padding: 12px 25px;
-            background: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-        }
-        button:hover {
-            transform: scale(1.1);
-            background-color: #0056b3;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            max-width: 400px;
-            margin: auto;
-        }
-        input, textarea {
-            margin: 12px 0;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-        input.visible, textarea.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        /* Estilo para el mensaje de agradecimiento */
-        #thanks-message {
-            display: none;
-            font-size: 24px;
-            color: #28a745;
-            font-weight: bold;
-            margin-top: 20px;
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background: #e0e0e0; }
+        header { background: #0056b3; color: white; padding: 20px; font-size: 24px; position: fixed; top: 0; width: 100%; z-index: 1000; }
+        nav { background: #003c80; padding: 10px; position: fixed; top: 70px; width: 100%; z-index: 999; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-size: 18px; transition: transform 0.3s, color 0.3s; }
+        nav a:hover { transform: scale(1.1); color: #ffcc00; }
+        
+        .content { padding-top: 120px; }
+        section { padding: 40px; max-width: 800px; margin: auto; background: white; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); margin-bottom: 20px; }
+        .servicios { background: #d1ecf1; }
+        .contacto { background: #f8d7da; }
+        .nosotros { background: #cce5ff; }
+        .testimonios { background: #fff3cd; }
+
+        button { padding: 10px 20px; background: #007bff; color: white; border: none; cursor: pointer; border-radius: 5px; font-size: 16px; transition: transform 0.3s, background-color 0.3s; }
+        button:hover { transform: scale(1.1); background-color: #0056b3; }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header { font-size: 20px; padding: 15px; }
+            nav { top: 60px; padding: 5px; }
+            nav a { font-size: 16px; display: block; padding: 10px; }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>IanTech - Reparación de Computadoras y Celulares - Armado y Optimización de Computadoras</h1>
+        <h1>IanTech - Reparación y Ensamblaje</h1>
     </header>
     <nav>
         <a href="#nosotros">Nosotros</a>
@@ -126,58 +39,42 @@
         <a href="#testimonios">Testimonios</a>
         <a href="#contacto">Contacto</a>
     </nav>
-    <section id="nosotros" class="nosotros">
-        <h2>Sobre Nosotros</h2>
-        <p>En IanTech te mostramos cómo armamos, reparamos y optimizamos tus equipos. Nos apasiona la tecnología y queremos que confíes en nuestro trabajo. Transparencia y calidad en cada reparación.</p>
-    </section>
-    <section id="servicios" class="servicios">
-        <h2>Nuestros Servicios</h2>
-        <ul>
-            <li>Reparación de computadoras</li>
-            <li>Reparación de celulares</li>
-            <li>Ensamblaje de PC</li>
-            <li>Optimización y mantenimiento preventivo</li>
-        </ul>
-    </section>
-    <section id="testimonios" class="testimonios">
-        <h2>Lo que dicen nuestros clientes</h2>
-        <p>"Excelente servicio, repararon mi PC en tiempo récord." - Juan Pérez</p>
-        <p>"Muy profesionales, explican todo el proceso y me dieron recomendaciones para el mantenimiento y optimización." - María López</p>
-    </section>
-    <section id="contacto" class="contacto">
-        <h2>Contacto</h2>
-        <p>¡Contáctanos para más información!</p>
-        <p><strong>WhatsApp:</strong> +54 221 676 3741</p>
-        <p><strong>Email:</strong> <a href="mailto:alelidaniele@gmail.com">alelidaniele@gmail.com</a></p>
-        <button onclick="window.location.href='https://wa.me/542216763741'">WhatsApp</button>
-        <h3>O déjanos tu mensaje</h3>
-        <form id="contact-form" action="https://formspree.io/f/xvgzwgkd" method="POST">
-            <input type="text" placeholder="Tu nombre" required>
-            <input type="email" placeholder="Tu correo" required>
-            <textarea placeholder="Tu mensaje" rows="4" required></textarea>
-            <input type="submit" value="Enviar">
-        </form>
-        <div id="thanks-message">Gracias por elegirnos ❤️</div> <!-- Mensaje de agradecimiento -->
-    </section>
-
+    <div class="content">
+        <section id="nosotros" class="nosotros">
+            <h2>Sobre Nosotros</h2>
+            <p>Expertos en reparación y ensamblaje de equipos.</p>
+        </section>
+        <section id="servicios" class="servicios">
+            <h2>Nuestros Servicios</h2>
+            <ul>
+                <li>Reparación de computadoras</li>
+                <li>Reparación de celulares</li>
+                <li>Ensamblaje de PC</li>
+                <li>Optimización y mantenimiento</li>
+            </ul>
+        </section>
+        <section id="testimonios" class="testimonios">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <p>"Servicio rápido y confiable" - Juan Pérez</p>
+        </section>
+        <section id="contacto" class="contacto">
+            <h2>Contacto</h2>
+            <p>¡Contáctanos para más información!</p>
+            <button onclick="window.location.href='https://wa.me/542216763741'">WhatsApp</button>
+            <h3>O déjanos tu mensaje</h3>
+            <form id="contactForm">
+                <input type="text" placeholder="Tu nombre" required>
+                <input type="email" placeholder="Tu correo" required>
+                <textarea placeholder="Tu mensaje" rows="4" required></textarea>
+                <input type="submit" value="Enviar">
+            </form>
+            <p id="graciasMensaje" style="display:none; color:#ff0000; font-size:18px;">Gracias por elegirnos ❤️</p>
+        </section>
+    </div>
     <script>
-        // Detecta cuando las secciones se vuelven visibles
-        window.addEventListener('scroll', function() {
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                if (rect.top < window.innerHeight && rect.bottom >= 0) {
-                    section.classList.add('visible');
-                }
-            });
-        });
-
-        // Muestra el mensaje de agradecimiento tras enviar el formulario
-        const form = document.getElementById('contact-form');
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Evita el envío por defecto del formulario
-            document.getElementById('thanks-message').style.display = 'block'; // Muestra el mensaje
-            form.reset(); // Resetea el formulario
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("graciasMensaje").style.display = "block";
         });
     </script>
 </body>

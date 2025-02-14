@@ -16,22 +16,26 @@
             background-attachment: fixed;
         }
         header {
-            background: rgba(0, 123, 255, 0.9); /* Azul brillante */
+            background: rgba(0, 123, 255, 0.9); /* Azul suave */
             color: white;
             padding: 20px;
             font-size: 26px;
             font-weight: bold;
-            position: sticky;
+            position: fixed;
             top: 0;
+            left: 0;
+            width: 100%;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
         nav {
-            background: rgba(0, 86, 179, 0.9); /* Azul más oscuro */
+            background: rgba(0, 86, 179, 0.85); /* Azul más suave */
             padding: 12px;
-            position: sticky;
+            position: fixed;
             top: 80px;
-            z-index: 1000;
+            left: 0;
+            width: 100%;
+            z-index: 999;
         }
         nav a {
             color: white;
@@ -51,7 +55,7 @@
             background: #ffffff;
             border-radius: 10px;
             box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
+            margin-top: 100px; /* Asegura que el contenido no quede tapado por el encabezado fijo */
             opacity: 0; /* Inicia invisible */
             transform: translateY(30px);
             transition: opacity 1s ease-out, transform 1s ease-out;
@@ -60,18 +64,18 @@
             opacity: 1;
             transform: translateY(0);
         }
-        /* Colores más vibrantes para las secciones */
+        /* Colores más apagados para las secciones */
         .servicios {
-            background: linear-gradient(to right, #ff7e5f, #feb47b); /* Naranja/rosado vibrante */
+            background: linear-gradient(to right, #ff6f61, #ff9a8b); /* Colores más apagados, pero cálidos */
         }
         .contacto {
-            background: linear-gradient(to right, #00b4d8, #0077b6); /* Azul vibrante */
+            background: linear-gradient(to right, #00aaff, #0077cc); /* Azul suave */
         }
         .nosotros {
-            background: linear-gradient(to right, #fcbf49, #f77f00); /* Amarillo y naranja */
+            background: linear-gradient(to right, #fdbb2d, #f39c12); /* Amarillo suave */
         }
         .testimonios {
-            background: linear-gradient(to right, #ff9a8b, #ff6a88); /* Rojo rosado brillante */
+            background: linear-gradient(to right, #ff6b81, #ff4e66); /* Rojo suave */
         }
         button {
             padding: 12px 25px;

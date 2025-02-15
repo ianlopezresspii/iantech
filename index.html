@@ -9,13 +9,14 @@
             font-family: 'Poppins', sans-serif; 
             margin: 0; 
             padding: 0; 
-            background: #dcdcdc; 
+            background: #f4f4f4; 
+            color: #333; 
             transition: all 0.3s ease;
         }
         header { 
             background: linear-gradient(90deg, #003366, #0066cc); 
             color: white; 
-            padding: 20px; 
+            padding: 20px 0; 
             font-size: 26px; 
             font-weight: bold; 
             text-align: center; 
@@ -24,6 +25,7 @@
             width: 100%; 
             z-index: 1000;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
         .sidebar { 
             position: fixed; 
@@ -33,6 +35,7 @@
             background: #002855; 
             height: 100%; 
             padding-top: 20px; 
+            box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
         .sidebar a { 
@@ -44,7 +47,7 @@
             text-transform: uppercase;
             font-weight: bold;
             letter-spacing: 1px;
-            transition: background 0.3s ease;
+            transition: background 0.3s ease, transform 0.3s ease;
         }
         .sidebar a:hover { 
             background: #004a99; 
@@ -52,18 +55,27 @@
         }
         .content { 
             margin-left: 270px; 
-            padding-top: 100px; 
-            transition: margin-left 0.3s ease;
+            padding-top: 120px; 
+            transition: margin-left 0.3s ease, padding-top 0.3s ease;
         }
         section { 
             padding: 50px; 
             max-width: 900px; 
             margin: auto; 
             background: white; 
-            border-radius: 12px; 
+            border-radius: 15px; 
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); 
             margin-bottom: 30px;
             transition: transform 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        section h2 {
+            color: #003366;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
         }
         .problema { 
             font-size: 22px; 
@@ -85,7 +97,7 @@
             font-weight: bold; 
             border-radius: 10px; 
             margin-top: 30px; 
-            animation: fadeIn 2s;
+            animation: fadeIn 2s forwards;
         }
         .oferta { 
             background: #e63946; 
@@ -104,6 +116,22 @@
         .contacto img:hover {
             transform: scale(1.1);
         }
+        .button {
+            display: inline-block;
+            background: #0066cc;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s ease, transform 0.3s ease;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background: #004a99;
+            transform: scale(1.1);
+        }
         @media (max-width: 768px) {
             .sidebar { 
                 width: 100%; 
@@ -118,12 +146,15 @@
             }
             .content { 
                 margin-left: 0; 
-                padding-top: 120px; 
+                padding-top: 160px; 
+            }
+            header { 
+                font-size: 20px;
             }
         }
         @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -142,6 +173,7 @@
             <p class="problema">¿Tenés problemas con tu computadora?</p>
             <p class="problema">¿No da video? ¿Se apaga sola?</p>
             <img src="https://i.pinimg.com/736x/18/a3/e1/18a3e12e2e4e98d07fca7363e14c4c3d.jpg" class="imagen-problema" alt="Computadora con fallas">
+            <a href="#contacto" class="button">Contactanos</a>
         </section>
         <section id="nosotros">
             <h2>Sobre Nosotros</h2>

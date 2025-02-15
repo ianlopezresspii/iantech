@@ -3,212 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IanTech - Soluciones en Computación</title>
+    <title>IanTech - Soluciones Creativas en Tecnología</title>
     <style>
-        body { 
-            font-family: 'Poppins', sans-serif; 
-            margin: 0; 
-            padding: 0; 
-            background: #f4f4f4; 
-            color: #333; 
-            transition: all 0.3s ease;
+        /* General body styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            color: #333;
+            overflow-x: hidden;
+            transition: all 0.4s ease;
         }
-        header { 
-            background: linear-gradient(90deg, #003366, #0066cc); 
-            color: white; 
-            padding: 20px 0; 
-            font-size: 26px; 
-            font-weight: bold; 
-            text-align: center; 
-            position: fixed; 
-            top: 0; 
-            width: 100%; 
-            z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-        .sidebar { 
-            position: fixed; 
-            left: 0; 
-            top: 70px; 
-            width: 250px; 
-            background: #002855; 
-            height: 100%; 
-            padding-top: 20px; 
-            box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        .sidebar a { 
-            display: block; 
-            color: white; 
-            padding: 15px; 
-            text-decoration: none; 
-            font-size: 18px; 
-            text-transform: uppercase;
-            font-weight: bold;
-            letter-spacing: 1px;
-            transition: background 0.3s ease, transform 0.3s ease;
-        }
-        .sidebar a:hover { 
-            background: #004a99; 
-            transform: scale(1.05);
-        }
-        .content { 
-            margin-left: 270px; 
-            padding-top: 120px; 
-            transition: margin-left 0.3s ease, padding-top 0.3s ease;
-        }
-        section { 
-            padding: 50px; 
-            max-width: 900px; 
-            margin: auto; 
-            background: white; 
-            border-radius: 15px; 
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); 
-            margin-bottom: 30px;
-            transition: transform 0.3s ease;
-            opacity: 0;
-            animation: fadeIn 1s forwards;
-        }
-        section h2 {
-            color: #003366;
-            font-size: 28px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .problema { 
-            font-size: 22px; 
-            font-weight: bold; 
-            text-align: center; 
-            color: #003366;
-        }
-        .imagen-problema { 
-            width: 100%; 
-            max-width: 800px; 
-            border-radius: 10px; 
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); 
-        }
-        .horarios, .oferta { 
-            background: #ffcc00; 
-            text-align: center; 
-            padding: 20px; 
-            font-size: 20px; 
-            font-weight: bold; 
-            border-radius: 10px; 
-            margin-top: 30px; 
-            animation: fadeIn 2s forwards;
-        }
-        .oferta { 
-            background: #e63946; 
-            color: white; 
-            font-size: 18px;
-        }
-        .contacto { 
-            text-align: center; 
-        }
-        .contacto img { 
-            width: 50px; 
-            margin: 10px; 
-            cursor: pointer; 
-            transition: transform 0.3s ease;
-        }
-        .contacto img:hover {
-            transform: scale(1.1);
-        }
-        .button {
-            display: inline-block;
-            background: #0066cc;
+
+        header {
+            background: #000;
             color: white;
-            padding: 15px 30px;
-            font-size: 18px;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 36px;
             font-weight: bold;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: background 0.3s ease, transform 0.3s ease;
-            margin-top: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background 0.4s ease;
         }
-        .button:hover {
-            background: #004a99;
-            transform: scale(1.1);
+
+        header:hover {
+            background: #333;
         }
-        @media (max-width: 768px) {
-            .sidebar { 
-                width: 100%; 
-                height: auto; 
-                position: relative; 
-                transform: translateX(-100%);
-            }
-            .sidebar a { 
-                text-align: center; 
-                width: 100%; 
-                padding: 10px;
-            }
-            .content { 
-                margin-left: 0; 
-                padding-top: 160px; 
-            }
-            header { 
-                font-size: 20px;
-            }
+
+        /* Main content styles */
+        .content {
+            margin-top: 120px;
+            text-align: center;
         }
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(20px); }
+
+        section {
+            margin: 50px 0;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeInUp 1.5s forwards;
+        }
+
+        /* Keyframe animation for sections */
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(30px); }
             100% { opacity: 1; transform: translateY(0); }
         }
+
+        /* Hover effects for buttons */
+        .button {
+            display: inline-block;
+            background-color: #ff7e5f;
+            color: white;
+            padding: 18px 36px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: #feb47b;
+            transform: translateY(-5px);
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 120px;
+            width: 250px;
+            background: #222;
+            height: 100%;
+            padding-top: 30px;
+            box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #fff;
+            padding: 15px;
+            text-decoration: none;
+            font-size: 20px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .sidebar a:hover {
+            background-color: #ff7e5f;
+        }
+
+        /* Footer styles */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 16px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                top: 60px;
+                position: relative;
+                transform: translateX(-100%);
+            }
+
+            .sidebar a {
+                width: 100%;
+                padding: 12px;
+            }
+
+            header {
+                font-size: 28px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .button {
+                font-size: 16px;
+                padding: 15px 30px;
+            }
+        }
+
+        /* Animations for images */
+        .fadeInImage {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
     </style>
 </head>
 <body>
+
+    <!-- Header -->
     <header>
-        IanTech - Soluciones en Computación
+        IanTech - Soluciones Creativas en Tecnología
     </header>
+
+    <!-- Sidebar -->
     <div class="sidebar">
-        <a href="#nosotros">Nosotros</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#testimonios">Testimonios</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#about">Nosotros</a>
+        <a href="#services">Servicios</a>
+        <a href="#testimonials">Testimonios</a>
+        <a href="#contact">Contacto</a>
     </div>
+
+    <!-- Main Content -->
     <div class="content">
-        <section id="problema">
-            <p class="problema">¿Tenés problemas con tu computadora?</p>
-            <p class="problema">¿No da video? ¿Se apaga sola?</p>
-            <img src="https://i.pinimg.com/736x/18/a3/e1/18a3e12e2e4e98d07fca7363e14c4c3d.jpg" class="imagen-problema" alt="Computadora con fallas">
-            <a href="#contacto" class="button">Contactanos</a>
+        
+        <!-- Hero Section -->
+        <section id="about">
+            <h2>Bienvenidos a IanTech</h2>
+            <p>Transformamos tus ideas en soluciones tecnológicas innovadoras y de calidad.</p>
+            <a href="#contact" class="button">Contáctanos Ahora</a>
         </section>
-        <section id="nosotros">
-            <h2>Sobre Nosotros</h2>
-            <p>Expertos en reparación y ensamblaje de equipos.</p>
-        </section>
-        <section id="servicios">
+
+        <!-- Services Section -->
+        <section id="services">
             <h2>Nuestros Servicios</h2>
-            <ul>
-                <li>Reparación de computadoras</li>
-                <li>Reparación de celulares</li>
-                <li>Ensamblaje de PC</li>
-                <li>Optimización y mantenimiento</li>
-            </ul>
+            <div style="display: flex; justify-content: center; gap: 40px;">
+                <div class="service-box">
+                    <img src="https://via.placeholder.com/300" alt="Servicio 1" class="fadeInImage" style="width: 100%; border-radius: 15px;">
+                    <h3>Reparación de Dispositivos</h3>
+                    <p>Servicio rápido y eficiente para computadoras y celulares.</p>
+                </div>
+                <div class="service-box">
+                    <img src="https://via.placeholder.com/300" alt="Servicio 2" class="fadeInImage" style="width: 100%; border-radius: 15px;">
+                    <h3>Optimización de Sistemas</h3>
+                    <p>Maximizamos el rendimiento de tus equipos con la mejor tecnología.</p>
+                </div>
+            </div>
         </section>
-        <section id="testimonios">
-            <h2>Lo que dicen nuestros clientes</h2>
-            <p>"Servicio rápido y confiable" - Juan Pérez</p>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials">
+            <h2>Lo que Dicen Nuestros Clientes</h2>
+            <blockquote>
+                "Excelente servicio y calidad en cada reparación. ¡Muy recomendados!" – María Gómez
+            </blockquote>
+            <blockquote>
+                "Armaron mi PC a medida y quedé impresionado con el rendimiento. ¡Gracias IanTech!" – Carlos Pérez
+            </blockquote>
         </section>
-        <section id="contacto" class="contacto">
+
+        <!-- Contact Section -->
+        <section id="contact">
             <h2>Contacto</h2>
-            <a href="https://wa.me/542216763741" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-            </a>
-            <a href="mailto:alelidaniele@gmail.com">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Email">
-            </a>
+            <p>¿Listo para transformar tu equipo? ¡Hablemos!</p>
+            <a href="https://wa.me/542216763741" target="_blank" class="button">Escríbenos en WhatsApp</a>
+            <a href="mailto:alelidaniele@gmail.com" class="button">Envía un Correo</a>
         </section>
-        <div class="horarios">
-            <p><strong><img src="https://i.pinimg.com/736x/47/4b/9b/474b9b4b6f75d0ac66c6b04b43b4f11e.jpg" width="30px"> Horarios:</strong></p>
-            <p>Lunes a Viernes 10:00 - 17:00 hs</p>
-            <p>Sábados 10:00 - 13:00 hs</p>
-        </div>
-        <div class="oferta">
-            <p>🎉 ¡Mantenimiento y optimización GRATIS si arreglamos o armamos tu equipo! 🎉</p>
-        </div>
+
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 IanTech. Todos los derechos reservados.</p>
+    </footer>
+
 </body>
 </html>

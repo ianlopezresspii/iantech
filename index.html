@@ -5,23 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IanTech - Soluciones en Computación</title>
     <style>
-        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: #dcdcdc; }
-        header { background: linear-gradient(90deg, #003366, #0066cc); color: white; padding: 20px; font-size: 26px; font-weight: bold; text-align: center; position: fixed; top: 0; width: 100%; z-index: 1000; }
-        .sidebar { position: fixed; left: 0; top: 70px; width: 250px; background: #002855; height: 100%; padding-top: 20px; }
-        .sidebar a { display: block; color: white; padding: 15px; text-decoration: none; font-size: 18px; transition: background 0.3s; }
-        .sidebar a:hover { background: #004a99; }
-        .content { margin-left: 270px; padding-top: 100px; }
-        section { padding: 50px; max-width: 900px; margin: auto; background: white; border-radius: 12px; box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); margin-bottom: 30px; }
-        .problema { font-size: 22px; font-weight: bold; text-align: center; }
-        .imagen-problema { width: 100%; max-width: 800px; border-radius: 10px; }
-        .horarios { background: #ffcc00; text-align: center; padding: 20px; font-size: 20px; font-weight: bold; border-radius: 10px; margin-top: 30px; }
-        .oferta { background: #e63946; color: white; text-align: center; padding: 15px; font-size: 18px; font-weight: bold; border-radius: 10px; margin-top: 30px; }
-        .contacto { text-align: center; }
-        .contacto img { width: 50px; margin: 10px; cursor: pointer; }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: #dcdcdc; 
+            transition: all 0.3s ease;
+        }
+        header { 
+            background: linear-gradient(90deg, #003366, #0066cc); 
+            color: white; 
+            padding: 20px; 
+            font-size: 26px; 
+            font-weight: bold; 
+            text-align: center; 
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar { 
+            position: fixed; 
+            left: 0; 
+            top: 70px; 
+            width: 250px; 
+            background: #002855; 
+            height: 100%; 
+            padding-top: 20px; 
+            transition: transform 0.3s ease;
+        }
+        .sidebar a { 
+            display: block; 
+            color: white; 
+            padding: 15px; 
+            text-decoration: none; 
+            font-size: 18px; 
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: background 0.3s ease;
+        }
+        .sidebar a:hover { 
+            background: #004a99; 
+            transform: scale(1.05);
+        }
+        .content { 
+            margin-left: 270px; 
+            padding-top: 100px; 
+            transition: margin-left 0.3s ease;
+        }
+        section { 
+            padding: 50px; 
+            max-width: 900px; 
+            margin: auto; 
+            background: white; 
+            border-radius: 12px; 
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); 
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        .problema { 
+            font-size: 22px; 
+            font-weight: bold; 
+            text-align: center; 
+            color: #003366;
+        }
+        .imagen-problema { 
+            width: 100%; 
+            max-width: 800px; 
+            border-radius: 10px; 
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); 
+        }
+        .horarios, .oferta { 
+            background: #ffcc00; 
+            text-align: center; 
+            padding: 20px; 
+            font-size: 20px; 
+            font-weight: bold; 
+            border-radius: 10px; 
+            margin-top: 30px; 
+            animation: fadeIn 2s;
+        }
+        .oferta { 
+            background: #e63946; 
+            color: white; 
+            font-size: 18px;
+        }
+        .contacto { 
+            text-align: center; 
+        }
+        .contacto img { 
+            width: 50px; 
+            margin: 10px; 
+            cursor: pointer; 
+            transition: transform 0.3s ease;
+        }
+        .contacto img:hover {
+            transform: scale(1.1);
+        }
         @media (max-width: 768px) {
-            .sidebar { width: 100%; height: auto; position: relative; }
-            .sidebar a { text-align: center; float: left; width: 25%; padding: 10px; }
-            .content { margin-left: 0; padding-top: 120px; }
+            .sidebar { 
+                width: 100%; 
+                height: auto; 
+                position: relative; 
+                transform: translateX(-100%);
+            }
+            .sidebar a { 
+                text-align: center; 
+                width: 100%; 
+                padding: 10px;
+            }
+            .content { 
+                margin-left: 0; 
+                padding-top: 120px; 
+            }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
     </style>
 </head>

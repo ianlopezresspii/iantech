@@ -36,6 +36,56 @@
             background: #333;
         }
 
+        /* Keyframe animations */
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            30% { transform: translateY(-20px); }
+            50% { transform: translateY(0); }
+            70% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeScale {
+            0% { opacity: 0; transform: scale(0.5); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes slideInBottom {
+            0% { transform: translateY(100%); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeSlide {
+            0% { opacity: 0; transform: translateX(-50px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Apply animations to elements */
+        .bounce {
+            animation: bounce 1s ease infinite;
+        }
+
+        .rotate {
+            animation: rotate 2s linear infinite;
+        }
+
+        .fade-scale {
+            animation: fadeScale 1.5s ease-out;
+        }
+
+        .slide-in-bottom {
+            animation: slideInBottom 1s ease-out;
+        }
+
+        .fade-slide {
+            animation: fadeSlide 1s ease-out;
+        }
+
         /* Main content styles */
         .content {
             margin-top: 120px;
@@ -48,14 +98,6 @@
             background: #ffffff;
             border-radius: 20px;
             box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            animation: fadeInUp 1.5s forwards;
-        }
-
-        /* Keyframe animation for sections */
-        @keyframes fadeInUp {
-            0% { opacity: 0; transform: translateY(30px); }
-            100% { opacity: 1; transform: translateY(0); }
         }
 
         /* Hover effects for buttons */
@@ -87,7 +129,6 @@
             height: 100%;
             padding-top: 30px;
             box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
         }
 
         .sidebar a {
@@ -97,7 +138,6 @@
             text-decoration: none;
             font-size: 20px;
             text-align: center;
-            transition: background-color 0.3s ease;
             font-weight: bold;
             letter-spacing: 1px;
         }
@@ -145,48 +185,36 @@
                 padding: 15px 30px;
             }
         }
-
-        /* Animations for images */
-        .fadeInImage {
-            opacity: 0;
-            animation: fadeIn 2s forwards;
-        }
-
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
     </style>
 </head>
 <body>
 
     <!-- Header -->
-    <header>
+    <header class="bounce">
         IanTech - Soluciones Creativas en Tecnología
     </header>
 
     <!-- Sidebar -->
     <div class="sidebar">
-        <a href="#about">Nosotros</a>
-        <a href="#services">Servicios</a>
-        <a href="#testimonials">Testimonios</a>
-        <a href="#contact">Contacto</a>
+        <a href="#about" class="fade-slide">Nosotros</a>
+        <a href="#services" class="fade-slide">Servicios</a>
+        <a href="#testimonials" class="fade-slide">Testimonios</a>
+        <a href="#contact" class="fade-slide">Contacto</a>
     </div>
 
     <!-- Main Content -->
     <div class="content">
         
         <!-- Hero Section -->
-        <section id="about">
-            <h2>Bienvenidos a IanTech</h2>
-            <p>Transformamos tus ideas en soluciones tecnológicas innovadoras y de calidad.</p>
-            <a href="#contact" class="button">Contáctanos Ahora</a>
+        <section id="about" class="slide-in-bottom">
+            <h2 class="fade-scale">Bienvenidos a IanTech</h2>
+            <p class="fade-scale">Transformamos tus ideas en soluciones tecnológicas innovadoras y de calidad.</p>
+            <a href="#contact" class="button rotate">Contáctanos Ahora</a>
         </section>
 
         <!-- Services Section -->
-        <section id="services">
-            <h2>Nuestros Servicios</h2>
+        <section id="services" class="fade-slide">
+            <h2 class="fade-scale">Nuestros Servicios</h2>
             <div style="display: flex; justify-content: center; gap: 40px;">
                 <div class="service-box">
                     <img src="https://via.placeholder.com/300" alt="Servicio 1" class="fadeInImage" style="width: 100%; border-radius: 15px;">
@@ -202,8 +230,8 @@
         </section>
 
         <!-- Testimonials Section -->
-        <section id="testimonials">
-            <h2>Lo que Dicen Nuestros Clientes</h2>
+        <section id="testimonials" class="slide-in-bottom">
+            <h2 class="fade-scale">Lo que Dicen Nuestros Clientes</h2>
             <blockquote>
                 "Excelente servicio y calidad en cada reparación. ¡Muy recomendados!" – María Gómez
             </blockquote>
@@ -213,11 +241,11 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contacto</h2>
-            <p>¿Listo para transformar tu equipo? ¡Hablemos!</p>
-            <a href="https://wa.me/542216763741" target="_blank" class="button">Escríbenos en WhatsApp</a>
-            <a href="mailto:alelidaniele@gmail.com" class="button">Envía un Correo</a>
+        <section id="contact" class="fade-slide">
+            <h2 class="fade-scale">Contacto</h2>
+            <p class="fade-scale">¿Listo para transformar tu equipo? ¡Hablemos!</p>
+            <a href="https://wa.me/542216763741" target="_blank" class="button rotate">Escríbenos en WhatsApp</a>
+            <a href="mailto:alelidaniele@gmail.com" class="button rotate">Envía un Correo</a>
         </section>
 
     </div>

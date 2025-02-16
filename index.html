@@ -60,6 +60,11 @@
             100% { opacity: 1; transform: translateX(0); }
         }
 
+        @keyframes slideInFromLeft {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+
         /* Apply animations to elements */
         .bounce {
             animation: bounce 1s ease infinite;
@@ -75,6 +80,10 @@
 
         .fade-slide {
             animation: fadeSlide 1s ease-out;
+        }
+
+        .slide-in-left {
+            animation: slideInFromLeft 0.5s ease-out;
         }
 
         /* Main content styles */
@@ -120,6 +129,7 @@
             height: 100%;
             padding-top: 30px;
             box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease-out;
         }
 
         .sidebar a {
@@ -131,10 +141,15 @@
             text-align: center;
             font-weight: bold;
             letter-spacing: 1px;
+            transition: background-color 0.3s ease;
         }
 
         .sidebar a:hover {
             background-color: #ff7e5f;
+        }
+
+        .sidebar a.active {
+            background-color: #feb47b;
         }
 
         /* Footer styles */
@@ -244,12 +259,85 @@
         <section id="services" class="fade-slide">
             <h2 class="fade-scale">Nuestros Servicios</h2>
             <div style="display: flex; justify-content: center; gap: 40px;">
-                <div class="service-box" onclick="openModal('reparacionModal')">
+                <div class="service-box" onclick="toggleService('reparacion')">
                     <img src="https://via.placeholder.com/300" alt="Servicio 1" class="fadeInImage" style="width: 100%; border-radius: 15px;">
                     <h3>Reparación de Dispositivos</h3>
                     <p>Servicio rápido y eficiente para computadoras y celulares.</p>
                 </div>
-                <div class="service-box" onclick="openModal('optimizacionModal')">
+                <div class="service-box" onclick="toggleService('optimizacion')">
                     <img src="https://via.placeholder.com/300" alt="Servicio 2" class="fadeInImage" style="width: 100%; border-radius: 15px;">
                     <h3>Optimización de Sistemas</h3>
-                    <p>M
+                    <p>Maximizamos el rendimiento de tus equipos con la mejor tecnología.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="slide-in-bottom">
+            <h2 class="fade-scale">Lo que Dicen Nuestros Clientes</h2>
+            <blockquote>
+                "Excelente servicio y calidad en cada reparación. ¡Muy recomendados!" – María Gómez
+            </blockquote>
+            <blockquote>
+                "Armaron mi PC a medida y quedé impresionado con el rendimiento. ¡Gracias IanTech!" – Carlos Pérez
+            </blockquote>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="fade-slide">
+            <h2 class="fade-scale">Contacto</h2>
+            <p class="fade-scale">¿Listo para transformar tu equipo? ¡Hablemos!</p>
+            <a href="https://wa.me/542216763741" target="_blank" class="button">Escríbenos en WhatsApp</a>
+            <a href="mailto:alelidaniele@gmail.com" class="button">Envía un Correo</a>
+        </section>
+
+        <!-- Service Detail Modals -->
+        <div id="reparacionDetails" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeServiceDetail('reparacionDetails')">&times;</span>
+                <h3>Reparación de Dispositivos</h3>
+                <p>Reparamos todo tipo de dispositivos, desde computadoras hasta celulares. Arreglamos desde el software (sistemas operativos, aplicaciones) hasta el hardware (pantallas, baterías, etc.)</p>
+            </div>
+        </div>
+
+        <div id="optimizacionDetails" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeServiceDetail('optimizacionDetails')">&times;</span>
+                <h3>Optimización de Sistemas</h3>
+                <p>Optimizamos tu equipo para que funcione de manera eficiente. Mejoramos el rendimiento en juegos, reducimos el input lag, y realizamos ajustes para una experiencia de uso más fluida.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 IanTech. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Toggle active class for sidebar items
+        function toggleService(service) {
+            if (service === 'reparacion') {
+                document.getElementById('reparacionDetails').style.display = "block";
+            } else {
+                document.getElementById('optimizacionDetails').style.display = "block";
+            }
+        }
+
+        function closeServiceDetail(serviceId) {
+            document.getElementById(serviceId).style.display = "none";
+        }
+
+        // Activate the clicked item in the sidebar
+        const sidebarLinks = document.querySelectorAll('.sidebar a');
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                sidebarLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

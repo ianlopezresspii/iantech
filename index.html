@@ -207,6 +207,61 @@
             border-radius: 10px;
             font-size: 18px;
         }
+
+        /* New for Reviews */
+        .reviews {
+            width: 100%;
+            overflow: hidden;
+            margin-top: 30px;
+        }
+
+        .reviews ul {
+            display: flex;
+            animation: slide 25s infinite;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .reviews li {
+            flex: 0 0 100%;
+            text-align: center;
+            font-size: 18px;
+            background: #f1f1f1;
+            padding: 20px;
+            margin-right: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(-100%); }
+            40% { transform: translateX(-200%); }
+            60% { transform: translateX(-300%); }
+            80% { transform: translateX(-400%); }
+            100% { transform: translateX(0); }
+        }
+
+        /* Verification */
+        .verification {
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: white;
+            font-size: 18px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .verification img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -260,13 +315,32 @@
         <!-- Testimonials Section -->
         <section id="testimonials">
             <h2>Lo que Dicen Nuestros Clientes</h2>
-            <blockquote>
-                "Excelente servicio y calidad en cada reparación. ¡Muy recomendados!" – María Gómez
-            </blockquote>
-            <blockquote>
-                "Armaron mi PC a medida y quedé impresionado con el rendimiento. ¡Gracias IanTech!" – Carlos Pérez
-            </blockquote>
+            <div class="reviews">
+                <ul>
+                    <li>"Excelente servicio y calidad en cada reparación. ¡Muy recomendados!" – María Gómez</li>
+                    <li>"Armaron mi PC a medida y quedé impresionado con el rendimiento. ¡Gracias IanTech!" – Carlos Pérez</li>
+                    <li>"Servicio rápido y eficiente. Me ayudaron a optimizar mi computadora para juegos." – Juan Díaz</li>
+                    <li>"Lo mejor en reparaciones, mi equipo quedó funcionando como nuevo." – Ana Rodríguez</li>
+                </ul>
+            </div>
         </section>
+
+        <!-- Problems Commonly Faced Section -->
+        <section id="problems">
+            <h2>Problemas Comunes en Equipos</h2>
+            <ul>
+                <li><strong>Problemas de rendimiento:</strong> Computadora lenta o con errores al iniciar.</li>
+                <li><strong>Fallas de hardware:</strong> Pantalla azul, fallos de disco duro o problemas con la tarjeta madre.</li>
+                <li><strong>Virus y malware:</strong> Amenazas que afectan la seguridad y el rendimiento del equipo.</li>
+                <li><strong>Optimización para juegos:</strong> Aumento de la velocidad y reducción del input lag para mejorar la experiencia.</li>
+            </ul>
+        </section>
+
+        <!-- Verification Section -->
+        <div class="verification">
+            <img src="https://via.placeholder.com/30" alt="Verificación">
+            <p>¡Tu confianza es nuestra prioridad! Todos nuestros servicios están verificados.</p>
+        </div>
 
         <!-- Contact Section -->
         <section id="contact">
@@ -289,4 +363,8 @@
 
     <!-- Footer -->
     <footer>
-       
+        IanTech © 2025 | Todos los derechos reservados.
+    </footer>
+
+</body>
+</html>
